@@ -26,12 +26,23 @@ export default MainHead
 
 const SearchTab = styled.div`
   display: flex;
-justify-content: center;
-align-items: center;
-
+  justify-content: center;
+  align-items: center;
+  margin: 5px 10px;
+  background-color:rgb(160, 156, 156);
+  border-radius: 30px;
+  width: 100%;
 `;
 
-const SearchInput = styled.input``;
+const SearchInput = styled.input`
+outline: none;
+height: 40px;
+border: none;
+border-radius: 32px;
+background-color:rgb(160, 156, 156);
+font-size: 16px;
+padding: 0;
+`;
 
 const Header = styled.div`
   display: flex;
