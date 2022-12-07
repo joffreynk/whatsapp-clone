@@ -1,13 +1,14 @@
 import { AccountCircle } from "@mui/icons-material";
+import { PropTypes } from "prop-types";
 import styled from "styled-components";
 import Image from "next/image";
 
 
-const SingeChart = (user) => {
+const SingeChart = ({id, name, lastMessage, profilepicture, lastSeen}) => {
   return (
     <Chat >
         <Profile>
-        {user.profilePicture? <ProfImage src={user.profilePicture} alt='problem with pic' height={50} width={50} /> : AccountCircle}
+        {profilepicture? <ProfImage src={profilepicture} alt='problem with pic' height={50} width={50} /> : AccountCircle}
         </Profile>
         <ChatInfo>
 
@@ -15,6 +16,14 @@ const SingeChart = (user) => {
     </Chat>
   )
 }
+
+SingeChart.propTypes = {
+    id: PropTypes.number,
+    name: PropTypes.string,
+    lastMessage: PropTypes.string,
+    profilepicture: PropTypes.string,
+    lastSeen: PropTypes.string,
+  }
 
 export default SingeChart
 
