@@ -1,7 +1,7 @@
 import SingeChart from "./SingeChart"
 
 const ChatLists = () => {
-  const chats = [
+  let mychats = [
     {
       id: 1,
       name: 'John',
@@ -37,9 +37,15 @@ const ChatLists = () => {
       profilepicture: '',
       lastSeen: '',
     },
-  ]
+  ];
+
+
   return (
-    chats.map(chat=> <SingeChart key={chat.id} user={chat} />)
+    <div>
+      {console.log(mychats.id)}
+      {mychats.map((chat) => <SingeChart key={chat.id} user={mychats} /> )}
+      <p>Hello</p>
+    </div>
   )
 }
 

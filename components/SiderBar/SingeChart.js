@@ -3,11 +3,11 @@ import styled from "styled-components";
 import Image from "next/image";
 
 
-const SingeChart = ({id, name, lastMessage, profilePicture, lastSeen}) => {
+const SingeChart = (user) => {
   return (
     <Chat >
         <Profile>
-        {profilePicture.length? <ProfImage src={profilePicture} alt='problem with pic' height={50} width={50} /> : AccountCircle}
+        {user.profilePicture? <ProfImage src={user.profilePicture} alt='problem with pic' height={50} width={50} /> : AccountCircle}
         </Profile>
         <ChatInfo>
 
