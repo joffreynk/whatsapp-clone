@@ -5,40 +5,36 @@ import Image from "next/image";
 
 
 const SingeChart = ({id, name, lastMessage, profilepicture, lastSeen}) => {
+  // const {id, name, lastMessage, profilepicture, lastSeen} = chat
   return (
-    <Chat >
+    <div>
         <Profile>
-        {profilepicture? <ProfImage src={profilepicture} alt='problem with pic' height={50} width={50} /> : AccountCircle}
-        </Profile>
-        <ChatInfo>
+        {profilepicture? <ProfImage src={profilepicture} alt='problem with pic' height={50} width={50} /> : <AccountCircle />}
 
-        </ChatInfo>
-    </Chat>
+        <Chat>
+          <h5>{name}</h5>
+        </Chat>
+
+        </Profile>
+    </div>
   )
 }
 
 SingeChart.propTypes = {
-    id: PropTypes.number,
-    name: PropTypes.string,
-    lastMessage: PropTypes.string,
-    profilepicture: PropTypes.string,
-    lastSeen: PropTypes.string,
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    lastMessage: PropTypes.string.isRequired,
+    profilepicture: PropTypes.string.isRequired,
+    lastSeen: PropTypes.string.isRequired,
   }
 
 export default SingeChart
 
-const ProfImage = styled(Image)`
-`;
+const ProfImage = styled(Image)``;
 
 
-const Profile = styled.div`
+const Profile = styled.div``;
 
-`;
+const Chat = styled.div``;
 
-const Chat = styled.div`
-
-`;
-
-const ChatInfo = styled.div`
-
-`;
+const ChatInfo = styled.div``;
