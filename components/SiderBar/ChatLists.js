@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { AccountCircle } from "@mui/icons-material";
 import SingeChart from "./SingeChart"
 
 const ChatLists = () => {
@@ -36,17 +38,10 @@ const ChatLists = () => {
       lastMessage: 'Hey Thhere, How are you?',
       profilepicture: '',
       lastSeen: '',
-    },
+    }
   ];
 
-
-  return (
-    <div>
-      {console.log(mychats.id)}
-      {mychats.map((chat) => <SingeChart key={chat.id} user={mychats} /> )}
-      <p>Hello</p>
-    </div>
-  )
+  return (mychats.length && mychats.map((chat) =>  <SingeChart key={chat.id} id={chat.id} name={chat.name} lastMessage={chat.lastMessage} profilepicture={chat.profilepicture} lastSeen={chat.lastSeen} /> ))
 }
 
 export default ChatLists
