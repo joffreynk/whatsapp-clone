@@ -15,8 +15,8 @@ function MainHead() {
         </IconsContainer>
       </Header>
       <SearchTab>
-        <Search />
         <SearchInput />
+        <Search />
       </SearchTab>
       </>
   )
@@ -26,7 +26,7 @@ export default MainHead
 
 const SearchTab = styled.div`
   display: flex;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
   margin: 5px 10px;
   background-color:rgb(160, 156, 156);

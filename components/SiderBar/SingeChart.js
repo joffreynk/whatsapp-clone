@@ -4,8 +4,8 @@ import styled from "styled-components";
 import Image from "next/image";
 
 
-const SingeChart = ({id, name, lastMessage, profilepicture, lastSeen}) => {
-  // const {id, name, lastMessage, profilepicture, lastSeen} = chat
+const SingeChart = ({chat}) => {
+  const {id, name, lastMessage, profilepicture, lastSeen} = chat
   return (
     <div>
         <Profile>
@@ -21,11 +21,8 @@ const SingeChart = ({id, name, lastMessage, profilepicture, lastSeen}) => {
 }
 
 SingeChart.propTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    lastMessage: PropTypes.string.isRequired,
-    profilepicture: PropTypes.string.isRequired,
-    lastSeen: PropTypes.string.isRequired,
+  chat: PropTypes.object.isRequired,
+    
   }
 
 export default SingeChart
@@ -33,7 +30,11 @@ export default SingeChart
 const ProfImage = styled(Image)``;
 
 
-const Profile = styled.div``;
+const Profile = styled.div`
+  display: flex;
+  justify-items: center;
+  align-items: center;
+`;
 
 const Chat = styled.div``;
 
